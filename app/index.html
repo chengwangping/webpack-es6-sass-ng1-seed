@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular</title>
+        <base href="/">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="css/font-awesome.min.css">   
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body ng-app="ngApp">
+        <div class="app app-header-fixed" ng-controller="appCtrl">
+            <div class="header-fixed-clear">
+                
+            </div>
+            <header ng-include="'components/header/header.html'" class="app-header"></header>
+            <menu ng-include="'components/menu/menu.html'" class="app-aside hidden-xs bg-black"></menu>
+            <div class="app-content">
+                <ui-view class="view-page fade-in-up"></ui-view>
+                <!-- <footer ng-include="'components/footer/footer.html'"></footer> -->
+            </div>
+        </div>
+        
+    </body> 
+</html>

@@ -1,0 +1,40 @@
+<!-- list -->
+<ul class="nav" ui-nav>
+    <li ui-sref-active="active">
+        <a ui-sref="index" class="allAnimate">
+            <i class="icon-user icon text-success-lter"></i>
+            <span class="font-bold">首页</span>
+        </a>
+    </li>
+    <li  ui-sref-active="active">
+        <a ui-sref="about"  class="allAnimate">
+            <i class="icon-user icon text-success-lter"></i>
+            <span class="font-bold">关于路由</span>
+        </a>
+    </li>
+    <li 
+        ng-class="{'active': $state.curRouter == 'shangjia'}">
+        <a href class="allAnimate auto">
+            <span class="pull-right">
+                <i class="fa fa-fw"
+                    ng-class=" $state.curRouter == 'shangjia'? 'fa-angle-down' : 'fa-angle-right'"
+                    ></i>
+            </span>
+            <i class="glyphicon glyphicon-stats"></i>
+            <span class="font-bold">商家管理</span>
+        </a>
+        <ul class="nav nav-sub allAnimate">
+            <li ui-sref-active="active">
+                <a ui-sref="shangjia/abc">
+                    <span>商家列表</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="shangjia/def">
+                    <span>意向商家列表</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="line hidden-folded"></li>
+</ul>
